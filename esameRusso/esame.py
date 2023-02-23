@@ -1,14 +1,18 @@
 from datetime import date
 
 # adatto Exception al mio programma
+
+
 class ExamException(Exception):
     pass
 
 # classe per leggere il file CSV
+
+
 class CSVTimeSeriesFile():
 
     # definisco il metodo init che prende come argomento il nome del file
-    def _init_(self, name=None):
+    def __init__(self, name=None):
         self.name = name
 
     # definisco il metodo get_data
@@ -170,3 +174,6 @@ def detect_similar_monthly_variations(time_series, years):
                 final_list.append(False)
 
     return final_list
+
+#prova = CSVTimeSeriesFile("data.csv")
+#print(detect_similar_monthly_variations(prova.get_data(), [1949, 1950]))
